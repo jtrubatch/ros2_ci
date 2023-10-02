@@ -14,13 +14,13 @@ pipeline {
                     fi
                     '''
                 sh 'cd ~/ros2_ws/src/ros2_ci'
-                sh 'docker build -f ros2.dockerfile -t ros2_ci .'
-                sh 'docker-compose up -d && sleep 20'
+                sh 'sudo docker build -f ros2.dockerfile -t ros2_ci .'
+                sh 'sudo docker-compose up -d && sleep 20'
             }
         }
         stage('TEST'){
             steps{
-                sh 'docker exec ros2_ci bash -c "colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"'
+                sh 'sudo docker exec ros2_ci bash -c "source /ros2_ws/install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"
             }
         }   
     }

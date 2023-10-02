@@ -33,3 +33,4 @@ RUN echo "source /ros2_ws/install/setup.bash" >> ~/.bashrc
 RUN sed -i 's|source "/opt/ros/\$ROS_DISTRO/setup.bash"|source "/ros2_ws/install/setup.bash"|g' /ros_entrypoint.sh
 
 CMD ["/bin/bash", "-c", "ros2 launch tortoisebot_waypoints tortoisebot.launch.py"]
+# COMMIT CHANGE
