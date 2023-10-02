@@ -14,7 +14,7 @@ pipeline {
                     fi
                     '''
                 sh 'cd ~/ros2_ws/src/ros2_ci'
-                sh 'docker build -f ros2.dockerfile -t ros2_ci'
+                sh 'docker build -f ros2.dockerfile -t ros2_ci .'
                 sh 'docker-compose up -d && sleep 20'
             }
         }
@@ -25,4 +25,4 @@ pipeline {
         }   
     }
 }
-// COMMENT FOR TEST PUSH CHANGED
+// COMMENT FOR TEST PUSH FIXED BUILD COMMAND
