@@ -107,3 +107,4 @@ bool WaypointTestFixture::OrientationTest() {
 TEST_F(WaypointTestFixture, Position) { EXPECT_TRUE(PositionTest()); }
 
 TEST_F(WaypointTestFixture, Orientation) { EXPECT_TRUE(OrientationTest()); }
+// COMMENT FOR TEST

@@ -20,7 +20,7 @@ pipeline {
         }
         stage('TEST'){
             steps{
-                sh 'sudo docker exec ros2_ci bash -c "source /ros2_ws/install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"
+                sh 'sudo docker exec ros2_ci bash -c "source /ros2_ws/install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+"'
             }
         }   
     }
